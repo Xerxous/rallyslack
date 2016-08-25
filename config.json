@@ -1,0 +1,38 @@
+{
+  "slackbot": {
+      "bot": "./bot/bot",
+      "slackBotKey": "[slack bot key]",
+      "slackWebKey": "[slack web key]"
+    },
+
+  "config": {
+
+    "modules": {
+
+      "capture": {
+          "path": "./bot/capture/capture",
+          "loadIgnore": true
+      },
+
+      "rally": {
+          "path": "./lib/rally/rally",
+          "options": {
+            "aliasPath": "./lib/rally/lib/alias.json",
+            "configPath": "./lib/rally/config.json",
+            "rallyKey": "[rally key]"
+          }
+      },
+
+      "conv": {
+          "path": "./lib/conv/conv"
+      }
+    },
+
+    "listens": {
+        "rally": "./lib/rally/listens",
+        "conv": "./lib/conv/listens",
+
+        "capture": "./bot/capture/listens"
+    }
+  }
+}

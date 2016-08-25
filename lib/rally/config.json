@@ -1,0 +1,57 @@
+{
+    "iterationFormat": "Sprint %s",
+
+    "urls": {
+        "hierarchicalrequirement": "https://rally1.rallydev.com/#/%sd/detail/userstory/%s",
+        "defect": "https://rally1.rallydev.com/#/%sd/detail/defect/%s",
+        "task": "https://rally1.rallydev.com/#/%sd/detail/task/%s"
+    },
+
+    "clrFormat": {
+        "Defined": "#787878",
+        "In-Progress": "#FBB917",
+        "Accepted": "#36A64F",
+        "Completed": "#659EC7"
+    },
+
+    "reply": {
+        "help": {
+            "username": "rallybot: Help",
+            "mrkdwn": true,
+            "icon_emoji": ":point_right:",
+            "attachments": [
+                {
+                    "fallback": "Rally Slackbot Commands",
+                    "color": "#36a64f",
+                    "title": "Rally Slackbot Commands",
+                    "title_link": "https://github.com/paypal/rallyslack/",
+                    "text": "• list <project> [? iteration number]\n• tasks <story or defect id>\n• accept <story or defect id>\n• start <task id>\n• complete <task id>\n• search <project> ? <keyword>\n• create task <story or defect id> <task name>\n• create alias <alias> <project name>\n• remove alias <alias>\n• alias\n• help\n"
+                }
+            ]
+        },
+        "empty": {
+            "text": "You may see this message if:\n• Your query returned no results\n• An unexpected error occured\n",
+            "username": "rallybot: No results",
+            "mrkdwn": true,
+            "icon_emoji": ":cry:"
+        },
+        "invalidAlias": {
+            "text": "You may see this message if:\n• Your alias matches a project name\n• The project for the alias does not exist\n• The alias already exists",
+            "username": "rallybot: Invalid alias",
+            "mrkdwn": true,
+            "icon_emoji": ":x:"
+        },
+        "error": {
+            "text": "Oops! Something went wrong!\nThe online APIs are not responding or the instance of this bot may have an invalid API key for third party services.",
+            "username": "rallybot: Uh Oh",
+            "mrkdwn": true,
+            "icon_emoji": ":scream:"
+        },
+        "unknown": {
+            "text": "Type \"help\" for more information.\nMake sure all IDs are captialized (ex. US345932, DE43241, TA421389) and the command is complete.",
+            "username": "rallybot: Command syntax error",
+            "mrkdwn": true,
+            "icon_emoji": ":question:"
+        }
+    }
+}
