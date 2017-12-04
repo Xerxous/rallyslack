@@ -7,14 +7,14 @@ var jsonfile = require('jsonfile');
 
 module.exports = function(options){
 
-    var slackWebAPI = options.slackWeb; //slackWebAPI to look up message code IDs (username/channel/etc.)
-    var logger = options.logger; //logging messages
-    var config = jsonfile.readFileSync(options.configPath); //config JSON file into object
+  var slackWebAPI = options.slackWeb; //slackWebAPI to look up message code IDs (username/channel/etc.)
+  var logger = options.logger; //logging messages
+  var config = jsonfile.readFileSync(options.configPath); //config JSON file into object
 
-    return {
-        example: function(bot, message){
-            logger(message);
-            bot.reply(message, 'Start developing your module!');
-        }
+  return {
+    example: function(bot, message){
+      logger(message);
+      bot.reply(message, 'Start developing your module!');
     }
-}
+  };
+};

@@ -5,6 +5,6 @@
 */
 
 module.exports = [
-    //module, function, regex
-    ['0', 'example', '(regex)']
-]
+  //module, function, regex
+  ['0', 'example', '(regex)']
+];

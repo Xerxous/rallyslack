@@ -1,6 +1,7 @@
 'use strict';
 
-var winston = require('winston');
+import _ from 'lodash';
+import winston from 'winston';
 
 winston.add(
   winston.transports.File, {
@@ -11,18 +12,18 @@ winston.add(
 );
 
 module.exports = (slackWeb) => {
-
     return (message) => {
-        var userId = message.user,
-            msg = message.text;
+        const userId = _.get(message, 'user');
+        const msg = _.get(message, 'text');
 
         slackWeb.userInfo(userId, (error, response, body) => {
             if (error){
                 winston.error(error);
             } else {
                 try {
-                    var user = JSON.parse(body).user;
-                    winston.info(user.profile.real_name + '(' + user.name + '): ' + msg);
+                    console.log(body);
+                    const user = _.get(JSON.parse(body), 'user', 'user');
+                    winston.info(_.get(user, 'profile.real_name') + '(' + _.get(user, 'name') + '): ' + msg);
                 } catch (err){
                     winston.error(err);
                 }

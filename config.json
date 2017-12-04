@@ -1,7 +1,7 @@
 {
   "slackbot": {
       "bot": "./bot/bot",
-      "slackBotKey": "[slack bot key]",
+      "slackBotKey": "xoxb-52200938562-hQ37sKcrxARtumy8sntir60X",
       "slackWebKey": "[slack web key]"
     },
 
@@ -19,7 +19,7 @@
           "options": {
             "aliasPath": "./lib/rally/lib/alias.json",
             "configPath": "./lib/rally/config.json",
-            "rallyKey": "[rally key]"
+            "rallyKey": "_qpGt6uSRZePuUopWzFoyf3h0oH5k0CIuBIuqTGwLHc"
           }
       },
 

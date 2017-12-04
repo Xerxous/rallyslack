@@ -110,6 +110,12 @@ There are some rules to creating an alias:
 
 This feature appends to the note section of the user story or task to log written changes: whom and when. The message will be under the line *** Rallybot *** to note the start of the audit.
 
+### Logs
+`logs/` is dedicated to accumulating logs recorded from the winston module.
+
+If a valid command is triggered, (which should evoke a logger method) a log entry will be added in this directory.
+
+Additional details about the logger properties can be found or modified in `bot/logger.js`
 
 
 ## Set up your Slackbot
@@ -163,4 +169,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
